@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior:smooth;
 }
 body{
     background: #202020;
@@ -268,17 +269,27 @@ nav ul li a:hover::after{
 }
 
 
-/* ------------------------- the social list ------------------------- */
+/* ------------------------- contact right part ------------------------- */
+#contact{
+    display: flex;
+    flex-direction: row;
+}
 
-  .menu{
+.par{
+    margin-top: 50px;
+    font-family: Poppins,sans-serif;
+    letter-spacing: 0.09em;
+    margin-bottom: 60px;
+}
+.menu{
     position:relative;
     width:280px;
     height:280px;
     display:flex;
     align-items:center;
     justify-content:center;
-  }
-  .menu .toggle{
+}
+.menu .toggle{
     position:relative;
     height:60px;
     width:60px;
@@ -293,14 +304,14 @@ nav ul li a:hover::after{
     cursor:pointer;
     transition:1.25s;
     z-index:5;
-  }
-  .menu.active .toggle{
+}
+.menu.active .toggle{
     transform:rotate(360deg);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15),
-      0 0 0 2px #333,
-      0 0 0 8px #fff;
-  }
-  .menu li{
+    0 0 0 2px #333,
+    0 0 0 8px #fff;
+}
+.menu li{
     position:absolute;
     left:0;
     list-style:none;
@@ -309,14 +320,14 @@ nav ul li a:hover::after{
     transform-origin:140px;
     scale:0;
     transition-delay: calc(0.05s * var(--i));
-  }
-  .menu.active li{
+}
+.menu.active li{
     scale:1;
-  }
-  .menu li a{
+}
+.menu li a{
     position:relative;
     display:flex;
-   transform:rotate(calc(360deg/-8 * var(--i)));
+    transform:rotate(calc(360deg/-8 * var(--i)));
     width:60px;
     height:60px;
     background-color:#FFF;
@@ -326,11 +337,100 @@ nav ul li a:hover::after{
     border-radius:50%;
     font-size:1.75rem;
     color:var(--clr);
-     box-shadow:0 3px 4px rgba(0,0,0,0.15);
+    box-shadow:0 3px 4px rgba(0,0,0,0.15);
     transition:0.5s;
-  }
-  .menu li:hover a{
+}
+.menu li:hover a{
     font-size:2.5rem;
     box-shadow:0 0 0 2px var(--clr),
-      0 0 0 6px #fff;
-  }
+    0 0 0 6px #fff;
+}
+
+
+/* ------------------------- contact left part (form) ------------------------- */
+#contact{
+    margin-top: 70px;
+}
+.contact-right{
+    width: 50%;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px 0;
+    margin: 15px 0;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 8px;
+}
+form btn2{
+    padding: 14p 60px;
+    cursor: pointer;
+}
+.submit{
+    display: inline-block;
+    margin: 20px auto;
+    background: #ff004f;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    font-family: Montserrat,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.submit:hover{
+    background:#ff004f;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 30px;
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+}
+
+#top1 {
+    position: fixed;
+    bottom: 20px;
+    font-family:'Poppins', sans-serif;
+    right: 20px;
+    background-color: #00000071;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    transition: transform 0.5s, background-color 0.3s, color 0.3s, opacity 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#top1:hover {
+    color:#000000d5 ;
+    background-color: white;
+    transform: scale(1.2);
+}
+#top1:active {
+    color: #fff;
+    background-color: #ff004f;
+    transition: color 0s; /* Disable transition during the click animation */
+    animation: clickAnimation 1.2s ease-in-out infinite;  
+}
+@keyframes clickAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}

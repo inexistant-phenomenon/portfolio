@@ -19,7 +19,7 @@
     <header>
         <div class="container">
             <nav>
-                <h1 class="sifu">SIFU</h1>
+                <h1 class="sifu" id="sifu">SIFU</h1>
                 <ul>
                     <li><a href="#about"><b>About</b></a></li>
                     <li><a href="#services"><b>Services</b></a></li>
@@ -131,9 +131,11 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact me</h1>
-                    <p>seifbblh1@gmail.com</p>
-                    <p>+21654507117</p>
+                    <h1 class="sub-titles">Contact me</h1>
+                    <div class="par">
+                        <p>seifbblh1@gmail.com</p>
+                        <p>+21654507117</p>
+                    </div>
                     <div class="menu">
                         <div class="toggle">
                             <ion-icon name="share-social"></ion-icon>
@@ -164,10 +166,22 @@
                                 </li>
                             </div>
                     </div>
-                <div class="contact-right"></div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder=" Your Name"/>
+                        <input type="email" name="email" placeholder="Your E-mail"/>
+                        <textarea placeholder="Message" rows="5" placeholder="Your Message"></textarea>
+                        <button class="submit" type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright © Seif. 2024</p>
+    </div>
+
+    <a href="#sifu" id="top1">TOP</a>
 
 
     <script>
