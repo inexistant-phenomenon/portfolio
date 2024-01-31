@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6efa105e7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1 class="sifu">SIFU</h1>
+                <ul>
+                    <li><a href="#home"><b>Home</b></a></li>
+                    <li><a href="#about"><b>About</b></a></li>
+                    <li><a href="#projects"><b>Projects</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
+                </ul>
+            </nav>
+            <div class="intro">
+                <div class="header-text">
+                    <p>Developer</p>
+                    <h1>Hello World, <br>I am <span>Seif</span> from Tunisia</h1>
+                </div>
+                <img src="images/me1.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- //////////////////////         ABOUT           //////////////////////////// -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-titles">About me</h1>
+                    <p id="paragraph">Hello, I am Seif and I am a Buisness Intelligence Student. I am an enthusiastic programmer and a developer that is always looking for new technologies. I am also very interested in Data Science and Machine Learning engineering thanks to me passion about statistics and problem solving thinking.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="showtab('skills')">Skills</p>
+                        <p class="tab-links" onclick="showtab('exp')">Experience</p>
+                        <p class="tab-links" onclick="showtab('ed')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end</span><br>Designing Front-end web pages using HTML, CSS and JAVASCRIPT</li>
+                            <li><span>Data Analysis</span><br>Advanced Python using libraries for Data Analysis like Matplotlib, Pandas, SickitLearn</li>
+                            <li><span>Console App</span><br>Designing Console Applications using C#</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="exp">
+                        <ul>
+                            <li><span>2021 - 2022</span><br>Baccaauréate</li>
+                            <li><span>2022 - 2025</span><br>Licence in Buisness Intelligence</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="ed">
+                        <ul>
+                            <li><span>2022-2023</span><br>Member in the Web Development departement in GDSC TBS</li>
+                            <li><span>2022-2023</span><br>Member in the Data Science departement in GDSC TBS</li>
+                            <li><span>2023-2024</span><br>Junior Consultant in MMT JE</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////          SERVICES       ///////////////////////////// -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-titles">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-end Development</h2>
+                    <p>I enjoy creating sleek and user-friendly websites using HTML, CSS, and JavaScript. Also, I try focus on designing visually appealing interfaces that enhance the overall user experience.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Data Science and Machine Learning</h2>
+                    <p>I specialize in data science and machine learning, using Python libraries like Matplotlib and Scikit-Learn for effective analysis and machine learning model development for more efficient calculations and precision.</p>
+                </div>
+                <div>
+                    <h2>Data Science and Machine Learning</h2>
+                    <p>In console application development, I am adept at utilizing C# to create efficient and functional applications. My skills include designing intuitive command-line interfaces and implementing robust functionality to meet specific application requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    // Hide all tab contents on page load
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    for (var i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].style.display = "none";
+    }
+
+    // Hide underline for all tab-links on page load
+    var tablinks = document.getElementsByClassName("tab-links");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active-link");
+        tablinks[i].style.borderBottom = "none";
+    }
+});
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function showtab(tabname) {
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active-link");
+        tablinks[i].style.borderBottom = "none";  // Hide underline for all tab-links
+    }
+    for (var i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].classList.remove("active-tab");
+        tabcontents[i].style.opacity = 0; // Set initial opacity to 0
+        tabcontents[i].style.display = "none"; // Hide all tab contents
+    }
+
+    event.currentTarget.classList.add("active-link");  // Show underline for the clicked tab-link
+
+    var selectedTabContent = document.getElementById(tabname);
+    selectedTabContent.classList.add("active-tab");
+    selectedTabContent.style.display = "block";
+
+    // Trigger a reflow before changing opacity to enable transition
+    selectedTabContent.offsetHeight;
+
+    // Set opacity to 1 for smooth transition
+    selectedTabContent.style.opacity = 1;
+}
+
+    </script>
+</body>
+</html>
