@@ -21,8 +21,8 @@
             <nav>
                 <h1 class="sifu">SIFU</h1>
                 <ul>
-                    <li><a href="#home"><b>Home</b></a></li>
                     <li><a href="#about"><b>About</b></a></li>
+                    <li><a href="#services"><b>Services</b></a></li>
                     <li><a href="#projects"><b>Projects</b></a></li>
                     <li><a href="#contact"><b>Contact</b></a></li>
                 </ul>
@@ -98,8 +98,76 @@
             </div>
         </div>
     </div>
-    <!-- //////////////////////           works      ///////////////////////////// -->
-
+    <!-- //////////////////////           projects      ///////////////////////////// -->
+    <h2 class="sub-titles proj">Projects</h2>
+    <div id="projects">
+        <article class="project">
+            <img src="images/proj1.jpg" height="200" width="250" alt="project1">
+            <h4>PROJECT 1</h4>
+            <p>Data science project with GDSC TBS on the Houselists and prices in Tunis State.</p>
+            <a href="https://colab.research.google.com/drive/1V5rrg1zVOoZVhninn67mBeQFlADipJCx?usp=drive_open" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </article>
+        <article class="project">
+            <img src="images/proj2.jpg" height="200" width="250" alt="project1=2">
+            <h4>PROJECT 2</h4>
+            <p>Data science project with GDSC TBS calculating the happiness of the happiness.</p>
+            <a href="https://colab.research.google.com/drive/1V5rrg1zVOoZVhninn67mBeQFlADipJCx?usp=sharing" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </article>
+        <article class="project">
+            <img src="images/proj3.jpg" height="200" width="250" alt="project3">
+            <h4>PROJECT 3</h4>
+            <p>A web page of Tunisia , to introduce the Country to tourists.</p>
+            <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </article>
+        <article class="project">
+            <img src="images/proj4.jpg" height="200" width="250" alt="project4">
+            <h4>Projet 4</h4>
+            <p>An interactive web game introducing the Tunisian-origin game CHKOBBA.</p>
+            <a href="https://chakkeb.tn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </article>
+    </div>
+    <!-- //////////////////////           contact       ///////////////////////////// -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p>seifbblh1@gmail.com</p>
+                    <p>+21654507117</p>
+                    <div class="menu">
+                        <div class="toggle">
+                            <ion-icon name="share-social"></ion-icon>
+                            </div>
+                                <li style="--i:0;--clr:#1877f2">
+                                <a href="https://m.me/01IQTOP"><ion-icon name="logo-facebook"></ion-icon></a>
+                                </li>
+                                <li style="--i:1;--clr:#25d366">
+                                    <a href="https://wa.link/3rnuse"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                                </li>
+                                <li style="--i:2;--clr:#1da1f2">
+                                    <a href="https://twitter.com/KoyoteStarrrk1"><ion-icon name="logo-twitter"></ion-icon></a>
+                                </li>
+                                <li style="--i:3;--clr:#FF5733">
+                                    <a href="https://stackoverflow.com/users/23054161/seif-eddine-ben-belahssen"><ion-icon name="logo-stackoverflow"></ion-icon></a>
+                                </li>
+                                <li style="--i:4;--clr:#0a66c2">
+                                    <a href="https://www.linkedin.com/in/seif-eddine-ben-belahssen-985553296/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                                </li>
+                                <li style="--i:5;--clr:#c32aa3">
+                                    <a href="https://medium.com/@saifluiz.12"><ion-icon name="logo-medium"></ion-icon></a>
+                                </li>
+                                <li style="--i:6;--clr:#1b1e21">
+                                    <a href="https://github.com/inexistant-phenomenon"><ion-icon name="logo-github"></ion-icon></a>
+                                </li>
+                                <li style="--i:7;--clr:#ff0000">
+                                    <a href="https://www.youtube.com/channel/UCu3UR4TubxB1X64YpNKzBiA"><ion-icon name="logo-youtube"></ion-icon></a>
+                                </li>
+                            </div>
+                    </div>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
 
 
     <script>
@@ -143,8 +211,13 @@ function showtab(tabname) {
 
     // Set opacity to 1 for smooth transition
     selectedTabContent.style.opacity = 1;
-}
-
+    }
+    const menu=document.querySelector(".menu");
+    const toggle=document.querySelector(".toggle");
+        toggle.addEventListener("click",()=>{
+        menu.classList.toggle("active");
+    })
     </script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
 </body>
 </html>
